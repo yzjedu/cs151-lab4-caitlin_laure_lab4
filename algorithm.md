@@ -1,6 +1,7 @@
 # Algorithm Document
 
 1. Ask the user to input what package they have 
+2. convert answer to lowercase
 3. while package is not equal to green, blue or purple
    1. Output 'That was an invalid package. Try again.'
    2. Ask the user what package they have
@@ -23,7 +24,8 @@
 6. if package = Purple
    1. set the variable price equal to 99.95
    2. ask user how much data they used in GBs as a float
-7. output to user price and GB_data
+7. output to user price 
+8. outputGB_data
 
 
 
