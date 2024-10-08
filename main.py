@@ -23,7 +23,7 @@ if package == 'green':
     data = 2
     data_used = int(input('How much data have you used this month?'))
     if data_used > data:
-        data_used =- data
+        data_used = data_used - data
         total_price = price + (data_used * 15)
     else:
         total_price = price
@@ -39,7 +39,7 @@ elif package == 'blue':
     data = 4
     data_used = int(input('How much data have you used this month?'))
     if data_used > data:
-        data_used =- data
+        data_used = data_used - data
         total_price = price + (data_used * 10)
     else:
         total_price = price
