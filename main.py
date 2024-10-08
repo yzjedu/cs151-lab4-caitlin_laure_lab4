@@ -9,6 +9,7 @@
 
 #this program tells a user how much they owe on their monthly phone bill
 
+#Asks the user what phone package they have of three options, and error checks
 package = input('What phone package do you have? ')
 package = package.lower()
 while package != 'green' and package != 'blue' and package != 'purple':
@@ -16,15 +17,14 @@ while package != 'green' and package != 'blue' and package != 'purple':
     package = input('What phone package do you have? ')
     package = package.lower()
 
-#works if input is green
+#Finds the price and data used if the user inputs green for their package
 if package == 'green':
     price = 49.99
     data = 2
-    data_used = input('How much data have you used this month?')
-    data_used = int(data_used)
+    data_used = int(input('How much data have you used this month?'))
     if data_used > data:
-        additional_data = data_used - data
-        total_price = price + (additional_data * 15)
+        data_used =- data
+        total_price = price + (data_used * 15)
     else:
         total_price = price
     coupon = input('Do you have a coupon? ')
@@ -32,22 +32,23 @@ if package == 'green':
         total_price = total_price -20
     elif coupon == 'no':
         total_price = total_price
-#works if input is blue
+
+#Finds the price and data used if the user inputs blue for their package
 elif package == 'blue':
     price = 70.00
     data = 4
-    data_used = input('How much data have you used this month?')
-    data_used = int(data_used)
+    data_used = int(input('How much data have you used this month?'))
     if data_used > data:
-        additional_data = data_used - data
-        total_price = price + (additional_data * 10)
+        data_used =- data
+        total_price = price + (data_used * 10)
     else:
         total_price = price
-#works if input is purple
-elif package == 'purple':
-    price = 99.95
-    total_price = price
 
+#Finds the price and data used if the user inputs purple for their package
+elif package == 'purple':
+    total_price = 99.95
+
+#Outputs the final total price to the user based on their package
 print(f'You owe ${total_price:.2f}')
 
 
